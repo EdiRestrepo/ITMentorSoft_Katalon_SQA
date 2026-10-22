@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataFileEntity>
+   <description>Datos de entrada TC01 (HU 1.2.2). Reemplazar los TODO con datos del entorno de pruebas.</description>
+   <name>TD_TC01_Aislamiento</name>
+   <tag></tag>
+   <containsHeaders>true</containsHeaders>
+   <csvSeperator>,</csvSeperator>
+   <dataFile>20547e95-7431-54f1-96f8-b15840c40b4e</dataFile>
+   <dataSourceUrl>Data Files/TD_TC01_Aislamiento.csv</dataSourceUrl>
+   <driver>CSV</driver>
+   <isInternalPath>true</isInternalPath>
+   <query></query>
+   <secureUserAccount>false</secureUserAccount>
+   <sheetName></sheetName>
+   <usingGlobalDBSetting>false</usingGlobalDBSetting>
+</DataFileEntity>

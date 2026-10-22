@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataFileEntity>
+   <description>Datos de entrada TC02 (HU 2.1.3 CA1): rol, resultado esperado y mensaje de denegacion. El texto &quot;autorización insuficiente&quot; proviene de HU 1.2.1 CA4; confirmar el texto real de la UI.</description>
+   <name>TD_TC02_Roles</name>
+   <tag></tag>
+   <containsHeaders>true</containsHeaders>
+   <csvSeperator>,</csvSeperator>
+   <dataFile>dbf386a1-c17d-5d63-aa82-3bc190db8596</dataFile>
+   <dataSourceUrl>Data Files/TD_TC02_Roles.csv</dataSourceUrl>
+   <driver>CSV</driver>
+   <isInternalPath>true</isInternalPath>
+   <query></query>
+   <secureUserAccount>false</secureUserAccount>
+   <sheetName></sheetName>
+   <usingGlobalDBSetting>false</usingGlobalDBSetting>
+</DataFileEntity>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: caso existente en Azure Test Plans #434 &quot;Validar interaccion de preguntas de la evaluacion inicial&quot;.
+HU 2.1.1 Desarrollo de evaluacion (Azure #212) - CA2 y CA3. Relacionado: CR-006 (#330) autosave incremental y reanudacion.
+Riesgo: RH03 - perdida o alteracion de respuestas de la evaluacion inicial (entrada de la categorizacion ML y de la calificacion LLM, SQA R01). Criticidad 15 (Alto).
+Tipo: positivo (flujo secuencial y persistencia) + negativo (intento de retroceso).
+ATENCION: cambia el estado de la cuenta USUARIO_ESTUDIANTE_EVAL; usar una cuenta nueva por ejecucion.</description>
+   <name>TC03_HU211_Evaluacion_inicial_secuencial_y_persistencia_de_respuestas</name>
+   <tag>ITMentorSoft, riesgo-critico, TC03</tag>
+   <comment>Dado que el estudiante inicia la evaluacion inicial
+Cuando responde y confirma la pregunta 1
+Entonces el sistema presenta la pregunta 2, sin controles para saltar o retroceder (CA2)
+Y al usar &quot;Atras&quot; del navegador no puede volver a editar la pregunta 1
+Y al reingresar al modulo continua en la pregunta 2, evidenciando que la respuesta 1 se persistio (CA3, CR-006)</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>02970067-7bfb-50d8-9104-2d4df2ddf7f1</testCaseGuid>
+</TestCaseEntity>

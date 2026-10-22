@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description>Perfil Staging [entorno Staging en AWS definido en el Documento SQA]</description>
+   <name>Staging</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description>TODO: URL base de ITMentorSoft (ej. la del frontend Angular). Sin barra final. [entorno Staging en AWS definido en el Documento SQA]</description>
+      <initValue>''</initValue>
+      <name>BASE_URL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>TODO: ruta (relativa a BASE_URL) donde el estudiante consulta SUS resultados academicos. HU 1.2.2 CA2. [entorno Staging en AWS definido en el Documento SQA]</description>
+      <initValue>''</initValue>
+      <name>RUTA_RESULTADOS_PROPIOS</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>TODO: ruta de resultados de UN estudiante por identificador. Debe contener el marcador {idEstudiante}. HU 1.2.2 CA3. [entorno Staging en AWS definido en el Documento SQA]</description>
+      <initValue>''</initValue>
+      <name>RUTA_RESULTADOS_ESTUDIANTE</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>TODO: ruta del modulo de administracion de evaluaciones tecnicas. HU 2.1.3 CA1. [entorno Staging en AWS definido en el Documento SQA]</description>
+      <initValue>''</initValue>
+      <name>RUTA_ADMIN_EVALUACIONES</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>TODO: ruta del modulo de evaluacion inicial. HU 2.1.1. [entorno Staging en AWS definido en el Documento SQA]</description>
+      <initValue>''</initValue>
+      <name>RUTA_EVALUACION_INICIAL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>TODO: email de la cuenta de prueba Estudiante A (sin contrasena; esta va en la variable de entorno ITM_PWD_ESTUDIANTE_A). [entorno Staging en AWS definido en el Documento SQA]</description>
+      <initValue>''</initValue>
+      <name>USUARIO_ESTUDIANTE_A</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>TODO: email de un Estudiante de prueba SIN evaluacion inicial iniciada (contrasena en ITM_PWD_ESTUDIANTE_EVAL). Se consume en cada ejecucion de TC03. [entorno Staging en AWS definido en el Documento SQA]</description>
+      <initValue>''</initValue>
+      <name>USUARIO_ESTUDIANTE_EVAL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>TODO: email de la cuenta de prueba Docente (contrasena en ITM_PWD_DOCENTE). [entorno Staging en AWS definido en el Documento SQA]</description>
+      <initValue>''</initValue>
+      <name>USUARIO_DOCENTE</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>TODO: email de la cuenta de prueba Administrador (contrasena en ITM_PWD_ADMINISTRADOR). [entorno Staging en AWS definido en el Documento SQA]</description>
+      <initValue>''</initValue>
+      <name>USUARIO_ADMINISTRADOR</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Segundos para esperas de elementos que deben aparecer de inmediato. [entorno Staging en AWS definido en el Documento SQA]</description>
+      <initValue>5</initValue>
+      <name>TIMEOUT_CORTO</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Segundos para cargas de pagina / respuestas del backend (SQA: P95 sincrono menor a 2 s). [entorno Staging en AWS definido en el Documento SQA]</description>
+      <initValue>20</initValue>
+      <name>TIMEOUT_LARGO</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

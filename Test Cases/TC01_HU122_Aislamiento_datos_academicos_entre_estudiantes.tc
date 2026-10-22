@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: caso existente en Azure Test Plans #496 &quot;Verificar aislamiento estricto de informacion academica y enmascaramiento con HTTP 404&quot;.
+HU 1.2.2 Acceso y privacidad en datos (Azure #198) - CA2 y CA3. Habilitador HH 1.2.1 (#360) CA2.
+Riesgo: RH01 / SQA R03 (fallos en RBAC) - exposicion de datos academicos de otro estudiante (IDOR). Criticidad 15 (Alto).
+Tipo: negativo (seguridad - confidencialidad) con control positivo previo.</description>
+   <name>TC01_HU122_Aislamiento_datos_academicos_entre_estudiantes</name>
+   <tag>ITMentorSoft, riesgo-critico, TC01</tag>
+   <comment>Dado que el Estudiante A esta autenticado
+Cuando consulta sus propios resultados, entonces ve sus datos y ningun dato del Estudiante B (CA2)
+Y cuando solicita directamente la URL de resultados del Estudiante B
+Entonces el sistema muestra el error 404 generico de &quot;usuario no existe&quot; y no expone datos del Estudiante B (CA3)</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>82cef1c4-6fbd-5682-8fd9-ac4323b6c194</testCaseGuid>
+</TestCaseEntity>
