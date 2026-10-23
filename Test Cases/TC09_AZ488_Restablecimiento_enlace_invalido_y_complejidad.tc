@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: Azure Test Plans #488 "Verificar validacion de token vencido, requisitos de contrasena segura y revocacion de sesiones previas". HU 1.1.3.
+Tipo: negativo. Enlace sin token, token falso y (opcional) enlace real vencido. No cambia contrasenas.</description>
+   <name>TC09_AZ488_Restablecimiento_enlace_invalido_y_complejidad</name>
+   <tag>ITMentorSoft, autenticacion, recuperacion, TC09</tag>
+   <comment>Dado que el usuario accede a un enlace de recuperacion
+Cuando el token no existe o supero los 5 minutos de vigencia
+Entonces el sistema rechaza el cambio de contrasena
+Y la nueva contrasena debe cumplir la complejidad exigida e igualar su confirmacion</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>849e116a-09a8-5bba-b91b-e63be28c3e1b</testCaseGuid>
+</TestCaseEntity>

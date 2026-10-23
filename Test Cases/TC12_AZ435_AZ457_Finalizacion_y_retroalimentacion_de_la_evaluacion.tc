@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: Azure Test Plans #435 "Garantizar finalizacion de evaluacion inicial" y #457 "CP-4.2.1 Generacion y consulta de retroalimentacion de una evaluacion".
+Tipo: positivo extremo a extremo. Envia una evaluacion completa (Data Files/TD_TC12_Evaluacion), espera la calificacion y revisa el resultado.
+Efecto: deja una evaluacion calificada en el historial del estudiante de pruebas.</description>
+   <name>TC12_AZ435_AZ457_Finalizacion_y_retroalimentacion_de_la_evaluacion</name>
+   <tag>ITMentorSoft, evaluacion, retroalimentacion, TC12</tag>
+   <comment>Dado que el estudiante termina la evaluacion inicial
+Cuando responde todas las preguntas y presiona Enviar evaluacion
+Entonces el sistema guarda las respuestas completas y califica la evaluacion
+Y al consultar el resultado muestra la nota y la retroalimentacion pregunta a pregunta</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4efc64c8-bca6-5cc1-a9b5-1ea8dd457495</testCaseGuid>
+</TestCaseEntity>

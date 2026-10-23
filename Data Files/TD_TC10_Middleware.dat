@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataFileEntity>
+   <description>Datos TC10 (#494): endpoint protegido, tipo de credencial y codigo HTTP esperado.</description>
+   <name>TD_TC10_Middleware</name>
+   <tag></tag>
+   <containsHeaders>true</containsHeaders>
+   <csvSeperator>COMMA</csvSeperator>
+   <dataFile>8581baaf-c7e7-5be3-86df-7ca00f070c45</dataFile>
+   <dataSourceUrl>Data Files/TD_TC10_Middleware.csv</dataSourceUrl>
+   <driver>CSV</driver>
+   <isInternalPath>true</isInternalPath>
+   <query></query>
+   <secureUserAccount>false</secureUserAccount>
+   <sheetName></sheetName>
+   <usingGlobalDBSetting>false</usingGlobalDBSetting>
+</DataFileEntity>

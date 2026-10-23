@@ -1,0 +1,12 @@
+credencial,endpoint,codigo_esperado,descripcion
+SIN_TOKEN,/assessments/all-questions?page=0&page_size=1,401,Banco de preguntas sin autenticación
+SIN_TOKEN,/reports/students?page=0&page_size=1,401,Reportes de estudiantes sin autenticación
+SIN_TOKEN,/assessments/topics,401,Temas de evaluación sin autenticación
+TOKEN_INVALIDO,/assessments/all-questions?page=0&page_size=1,401,Banco de preguntas con un token con firma inválida
+TOKEN_INVALIDO,/reports/students?page=0&page_size=1,401,Reportes con un token con firma inválida
+ESTUDIANTE,/assessments/summary?student_id={idPropio}&page=0&page_size=1,2xx,Control positivo: el estudiante consulta sus propias evaluaciones
+ESTUDIANTE,/assessments/all-questions?page=0&page_size=1,403,El estudiante no tiene permiso sobre el banco de preguntas
+ESTUDIANTE,/reports/students?page=0&page_size=1,403,El estudiante no tiene permiso sobre los reportes docentes
+ESTUDIANTE,/reports/students-by-category?category=b%C3%A1sico&page=0&page_size=5,403,El estudiante no tiene permiso sobre el reporte de estudiantes por categoría
+DOCENTE,/reports/students?page=0&page_size=1,2xx,Control positivo: el docente consulta los reportes de estudiantes
+DOCENTE,/content/ratings/all,403,El docente no tiene permiso sobre las calificaciones consolidadas (administrador)

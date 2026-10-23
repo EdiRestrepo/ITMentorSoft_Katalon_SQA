@@ -4,10 +4,16 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
 import java.nio.file.Paths
 
+import org.openqa.selenium.Cookie
+import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
 
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.configuration.RunConfiguration
+import com.kms.katalon.core.webui.driver.DriverFactory
+
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.common.WebUiCommonHelper
@@ -64,8 +70,22 @@ class Autenticacion {
 	 */
 	@Keyword
 	static void iniciarSesion(String cuenta, String caso) {
+		iniciarSesion(cuenta, caso, false)
+	}
+
+	/**
+	 * Con forzarLogin = false reutiliza la sesión guardada por un login anterior de la misma cuenta
+	 * (Evidencias/sesiones/, carpeta no versionada) para no pedir un código OTP en cada caso.
+	 * Los casos que verifican el propio login usan forzarLogin = true.
+	 */
+	@Keyword
+	static void iniciarSesion(String cuenta, String caso, boolean forzarLogin) {
 		Map<String, String> datos = CUENTAS[cuenta]
 		String usuario = Configuracion.leerVariable(datos.usuario).toString()
+		if (!forzarLogin && restaurarSesion(cuenta, caso)) {
+			omitirGuia(caso)
+			return
+		}
 		String password = System.getenv(datos.entorno)
 
 		WebUI.navigateToUrl(Configuracion.url(Configuracion.leerVariable('RUTA_LOGIN')))
@@ -95,7 +115,73 @@ class Autenticacion {
 					"(código no ingresado, incorrecto o vencido). Aumentar TIMEOUT_OTP en el perfil si hace falta más tiempo.")
 		}
 		Evidencia.registrar(caso, "Sesión iniciada con la cuenta $cuenta (${WebUI.getUrl()})")
+		guardarSesion(cuenta)
 		omitirGuia(caso)
+	}
+
+	/** Página de inicio de cada rol, a la que redirige el login (HU 1.1.2 CA5). */
+	static String inicioDeCuenta(String cuenta) {
+		if (cuenta.startsWith('DOCENTE')) {
+			return '/teacher/dashboard'
+		}
+		return cuenta.startsWith('ADMINISTRADOR') ? '/admin/dashboard' : '/student/dashboard'
+	}
+
+	static File archivoSesion(String cuenta) {
+		File carpeta = Paths.get(RunConfiguration.getProjectDir(), Evidencia.CARPETA, 'sesiones').toFile()
+		carpeta.mkdirs()
+		return new File(carpeta, "${CUENTAS[cuenta].usuario}.json")
+	}
+
+	/** Guarda sessionStorage y cookies de la sesión actual (contienen tokens: la carpeta Evidencias no se versiona). */
+	static void guardarSesion(String cuenta) {
+		try {
+			String almacenamiento = WebUI.executeJavaScript('return JSON.stringify(sessionStorage)', null)
+			List cookies = DriverFactory.getWebDriver().manage().getCookies().collect { Cookie c ->
+				[name: c.name, value: c.value, domain: c.domain, path: c.path, secure: c.secure, httpOnly: c.httpOnly, expiry: c.expiry?.time]
+			}
+			archivoSesion(cuenta).setText(JsonOutput.toJson([sessionStorage: new JsonSlurper().parseText(almacenamiento), cookies: cookies]), 'UTF-8')
+		} catch (Exception e) {
+			KeywordUtil.logInfo("No se pudo guardar la sesión de $cuenta: ${e.message}")
+		}
+	}
+
+	/** Restaura la sesión guardada y comprueba que la aplicación la acepta. Devuelve false si no hay sesión válida. */
+	static boolean restaurarSesion(String cuenta, String caso) {
+		File archivo = archivoSesion(cuenta)
+		if (!archivo.exists()) {
+			return false
+		}
+		try {
+			Map sesion = new JsonSlurper().parseText(archivo.getText('UTF-8')) as Map
+			WebUI.navigateToUrl(Configuracion.url(Configuracion.leerVariable('RUTA_LOGIN')))
+			WebUI.waitForPageLoad(Configuracion.timeoutLargo())
+			WebUI.executeJavaScript('var d = JSON.parse(arguments[0]); Object.keys(d).forEach(function (k) { sessionStorage.setItem(k, d[k]); });',
+					[JsonOutput.toJson(sesion.sessionStorage)])
+			WebDriver driver = DriverFactory.getWebDriver()
+			(sesion.cookies as List<Map>).each { Map c ->
+				Cookie.Builder cookie = new Cookie.Builder(c.name as String, c.value as String).path((c.path ?: '/') as String)
+						.isSecure(c.secure as boolean).isHttpOnly(c.httpOnly as boolean)
+				if (c.expiry) {
+					cookie.expiresOn(new Date(c.expiry as long))
+				}
+				driver.manage().addCookie(cookie.build())
+			}
+			String inicio = inicioDeCuenta(cuenta)
+			WebUI.navigateToUrl(Configuracion.url(inicio))
+			WebUI.waitForPageLoad(Configuracion.timeoutLargo())
+			if (WebUI.waitForElementVisible(findTestObject(CNT_BIENVENIDA), Configuracion.timeoutLargo(), FailureHandling.OPTIONAL) && WebUI.getUrl().contains(inicio)) {
+				Evidencia.registrar(caso, "Sesión de la cuenta $cuenta reutilizada (${WebUI.getUrl()})")
+				guardarSesion(cuenta)
+				return true
+			}
+		} catch (Exception e) {
+			KeywordUtil.logInfo("No se pudo reutilizar la sesión de $cuenta: ${e.message}")
+		}
+		Evidencia.registrar(caso, "La sesión guardada de la cuenta $cuenta ya no es válida: se inicia sesión de nuevo")
+		archivo.delete()
+		cerrarSesion(caso)
+		return false
 	}
 
 	/** Cierra la guía de bienvenida si está abierta: Katalon usa un perfil de navegador nuevo y la guía aparece en cada ejecución. */

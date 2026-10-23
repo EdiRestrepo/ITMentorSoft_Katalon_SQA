@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: Azure Test Plans #450 "Verificar acceso autorizado a reportes por estudiante" y #500 "Validar control de acceso al modulo de reportes generales y extraccion de datos consolidados JSON".
+Tipo: positivo (Docente) y negativo (Estudiante), en interfaz y API.</description>
+   <name>TC16_AZ450_AZ500_Acceso_por_rol_a_reportes_y_datos_consolidados</name>
+   <tag>ITMentorSoft, reportes, seguridad, TC16</tag>
+   <comment>Dado que existen resultados registrados de estudiantes
+Cuando un usuario no autorizado intenta consultar los resultados
+Entonces el sistema rechaza el acceso a la informacion
+Y cuando un docente autorizado realiza la consulta el sistema muestra el reporte y entrega el JSON consolidado</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>6d991678-41f9-5aa1-adf5-1537b4978ea0</testCaseGuid>
+</TestCaseEntity>

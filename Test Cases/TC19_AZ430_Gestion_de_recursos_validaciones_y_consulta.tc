@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: Azure Test Plans #430 "Verificar registro y actualizacion de contenido academico".
+Tipo: negativo (validaciones) y positivo (consulta por categoria, busqueda y edicion). No guarda recursos.</description>
+   <name>TC19_AZ430_Gestion_de_recursos_validaciones_y_consulta</name>
+   <tag>ITMentorSoft, recursos, TC19</tag>
+   <comment>Dado que el docente ingresa al modulo de recursos educativos
+Cuando intenta guardar con campos vacios o URL invalida
+Entonces el sistema muestra la validacion y no guarda el recurso
+Y al consultar por categoria solo se muestran los recursos asociados
+Y la edicion carga los datos del recurso</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a398905f-c6c5-5552-a7b8-35f6f9dc0103</testCaseGuid>
+</TestCaseEntity>

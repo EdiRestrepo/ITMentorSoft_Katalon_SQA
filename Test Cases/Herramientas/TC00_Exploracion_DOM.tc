@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Herramienta de apoyo (no es un caso de prueba): guarda HTML, capturas y respuestas de API de las paginas del rol indicado en Evidencias/dom/&lt;cuenta>/ para mantener los localizadores.</description>
+   <name>TC00_Exploracion_DOM</name>
+   <tag>GenAI,herramienta</tag>
+   <integratedEntity>
+      <productName>TESTOPS</productName>
+      <properties>
+         <entry>
+            <key>createdByName</key>
+            <value>Edison</value>
+         </entry>
+         <entry>
+            <key>lastModifiedByName</key>
+            <value>Edison</value>
+         </entry>
+         <entry>
+            <key>createdByUuid</key>
+            <value>e2cd1ea1-865f-49a4-b2b8-006e103ecabd</value>
+         </entry>
+         <entry>
+            <key>lastModifiedByUuid</key>
+            <value>e2cd1ea1-865f-49a4-b2b8-006e103ecabd</value>
+         </entry>
+      </properties>
+      <type>TESTCASE</type>
+   </integratedEntity>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7c353d49-33ba-4ad6-980a-dbaa7e5b20e2</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>9fc3d469-3381-4fec-a003-e06fba368737</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'ESTUDIANTE'</defaultValue>
+      <description></description>
+      <id>9fc3d469-3381-4fec-a003-e06fba368737</id>
+      <masked>false</masked>
+      <name>cuenta</name>
+   </variable>
+</TestCaseEntity>

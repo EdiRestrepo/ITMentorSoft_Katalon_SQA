@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: Azure Test Plans #478 "Validar limites de longitud y expresiones regulares en campos del formulario de registro". HU 1.1.1 Registro.
+Tipo: negativo, dirigido por datos (Data Files/TD_TC05_Registro).
+No crea cuentas: el formulario nunca se envia con datos validos.</description>
+   <name>TC05_AZ478_Registro_limites_de_longitud_y_formato</name>
+   <tag>ITMentorSoft, autenticacion, registro, TC05</tag>
+   <comment>Dado que un visitante despliega el formulario de registro (nombre, usuario, correo, contrasena y confirmacion)
+Cuando ingresa datos que violan las restricciones de longitud o los patrones definidos
+Y hace clic en el boton de registro
+Entonces el sistema detiene la transaccion y muestra mensajes de error especificos por cada campo</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3934d12d-faa9-51eb-bab9-05e89437026b</testCaseGuid>
+</TestCaseEntity>

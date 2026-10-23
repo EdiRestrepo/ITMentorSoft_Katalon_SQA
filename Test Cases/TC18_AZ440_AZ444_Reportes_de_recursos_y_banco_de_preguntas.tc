@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: Azure Test Plans #440 "Verificar generacion de reportes de contenido academico" y #444 "Verificar generacion de reportes de debilidades por estudiante".
+Tipo: positivo (consistencia de totales y orden de valoracion).</description>
+   <name>TC18_AZ440_AZ444_Reportes_de_recursos_y_banco_de_preguntas</name>
+   <tag>ITMentorSoft, reportes, recursos, TC18</tag>
+   <comment>Dado que existen calificaciones de recursos y evaluaciones registradas
+Cuando el docente consulta los reportes
+Entonces el sistema muestra las metricas y los recursos peor y mejor valorados ordenados por promedio
+Y presenta los graficos del banco de preguntas y el progreso por tema de cada estudiante</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>862e1333-213f-5449-a3eb-aecd65c1f2ac</testCaseGuid>
+</TestCaseEntity>

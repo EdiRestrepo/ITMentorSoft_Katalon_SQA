@@ -32,6 +32,25 @@ class Api {
 		return [status: (respuesta?.status ?: -1) as int, body: (respuesta?.body ?: '').toString()]
 	}
 
+	static final String SCRIPT_SIN_SESION = '''
+		var callback = arguments[arguments.length - 1];
+		var token = arguments[1];
+		fetch(arguments[0], {credentials: 'omit', headers: token ? {Authorization: 'Bearer ' + token} : {}})
+			.then(function (r) { return r.text().then(function (t) { callback({status: r.status, body: t}); }); })
+			.catch(function (e) { callback({status: -1, body: String(e)}); });
+	'''
+
+	/**
+	 * GET sin la sesión del navegador (sin cookies): con token null no envía credenciales, y con un token
+	 * envía solo ese Bearer. Sirve para verificar las respuestas 401 del control de acceso (HU 1.2.1).
+	 */
+	@Keyword
+	static Map<String, Object> getSinSesion(String ruta, String token) {
+		JavascriptExecutor navegador = (JavascriptExecutor) DriverFactory.getWebDriver()
+		Map respuesta = navegador.executeAsyncScript(SCRIPT_SIN_SESION, Configuracion.url(ruta), token) as Map
+		return [status: (respuesta?.status ?: -1) as int, body: (respuesta?.body ?: '').toString()]
+	}
+
 	/** Valor de sessionStorage del frontend (por ejemplo 'auth_user_id'). */
 	@Keyword
 	static String valorDeSesion(String clave) {

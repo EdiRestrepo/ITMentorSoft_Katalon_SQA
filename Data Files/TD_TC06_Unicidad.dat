@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataFileEntity>
+   <description>Datos TC06 (#482): usuario de una cuenta existente y datos de formato valido. El correo es USUARIO_ESTUDIANTE.</description>
+   <name>TD_TC06_Unicidad</name>
+   <tag></tag>
+   <containsHeaders>true</containsHeaders>
+   <csvSeperator>COMMA</csvSeperator>
+   <dataFile>874b39c8-62e6-5aed-8cd5-b595bd7983a2</dataFile>
+   <dataSourceUrl>Data Files/TD_TC06_Unicidad.csv</dataSourceUrl>
+   <driver>CSV</driver>
+   <isInternalPath>true</isInternalPath>
+   <query></query>
+   <secureUserAccount>false</secureUserAccount>
+   <sheetName></sheetName>
+   <usingGlobalDBSetting>false</usingGlobalDBSetting>
+</DataFileEntity>

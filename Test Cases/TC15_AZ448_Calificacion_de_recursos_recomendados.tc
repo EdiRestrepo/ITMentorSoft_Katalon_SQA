@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: Azure Test Plans #448 "Verificar calificacion de recursos recomendados".
+Tipo: positivo. Califica un recurso con promedio 5.0 (4 y luego 5) para no alterar el promedio publicado.</description>
+   <name>TC15_AZ448_Calificacion_de_recursos_recomendados</name>
+   <tag>ITMentorSoft, recursos, calificacion, TC15</tag>
+   <comment>Dado que el estudiante accede a un recurso recomendado
+Cuando selecciona y confirma una calificacion de 1 a 5
+Entonces el sistema guarda la valoracion
+Y al modificarla actualiza el valor sin generar registros duplicados</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d997e2b7-b69a-50a8-9ab5-6c48a4117a9b</testCaseGuid>
+</TestCaseEntity>

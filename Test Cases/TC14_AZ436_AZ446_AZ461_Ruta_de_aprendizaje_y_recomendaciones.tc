@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: Azure Test Plans #436 (generacion y actualizacion de la ruta personalizada), #446 (recepcion de la ruta) y #461 (confirmacion de recurso finalizado). Complementa #426.
+Tipo: positivo. Marca un recurso como visto y lo desmarca al final (deja la ruta como estaba).</description>
+   <name>TC14_AZ436_AZ446_AZ461_Ruta_de_aprendizaje_y_recomendaciones</name>
+   <tag>ITMentorSoft, ruta, recomendaciones, TC14</tag>
+   <comment>Dado que el estudiante tiene debilidades identificadas
+Cuando el sistema genera su ruta personalizada
+Entonces muestra recursos sin duplicados asociados a sus areas de mejora con totales consistentes
+Y al marcar un recurso como visto actualiza el avance sin recargar la pagina</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4a6d105c-87c3-5f8a-b47b-b1989717cb38</testCaseGuid>
+</TestCaseEntity>

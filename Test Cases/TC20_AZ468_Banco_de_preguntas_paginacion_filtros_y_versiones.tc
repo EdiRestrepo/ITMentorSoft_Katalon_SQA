@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: Azure Test Plans #468 "Validar paginacion exacta de 20 preguntas por tema y persistencia de operaciones CRUD en cuestionarios". Complementa #499 (historial de versiones).
+Tipo: positivo y negativo. No crea, edita ni desactiva preguntas.</description>
+   <name>TC20_AZ468_Banco_de_preguntas_paginacion_filtros_y_versiones</name>
+   <tag>ITMentorSoft, banco-preguntas, TC20</tag>
+   <comment>Dado que el docente accede al banco de preguntas
+Cuando el sistema carga la lista de preguntas
+Entonces despliega el listado paginado de forma consistente
+Y los filtros por dificultad y categoria muestran solo preguntas del valor elegido
+Y el formulario de nueva pregunta no registra datos invalidos
+Y el detalle permite consultar el historial de versiones</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3f9cb381-7c78-5b5b-bb22-bfee8f5b736d</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: Azure Test Plans #482 "Verificar unicidad de username/email y almacenamiento seguro mediante hash". HU 1.1.1 Registro.
+Tipo: negativo. Usa usuario y correo de una cuenta existente (ambos duplicados): un sistema correcto no crea la cuenta.
+Alcance: el hash bcrypt/Argon2 no es observable desde la interfaz.</description>
+   <name>TC06_AZ482_Registro_unicidad_de_usuario_y_correo</name>
+   <tag>ITMentorSoft, autenticacion, registro, TC06</tag>
+   <comment>Dado que el visitante envia el formulario de registro con datos de formato valido y contrasenas coincidentes
+Cuando el sistema verifica la existencia del usuario o correo
+Y detecta que ya se encuentran registrados
+Entonces rechaza el registro con un mensaje de dato ya en uso</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>01e74463-2b5e-5a90-850e-aed7cd28416a</testCaseGuid>
+</TestCaseEntity>

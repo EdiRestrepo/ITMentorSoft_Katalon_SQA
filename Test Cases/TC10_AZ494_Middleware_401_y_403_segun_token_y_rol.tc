@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: Azure Test Plans #494 "Validar interceptacion de Middleware retornando HTTP 401 y HTTP 403 segun token y permisos". HU 1.2.1 Control de acceso. Complementa #489.
+Tipo: negativo con controles positivos, dirigido por datos (Data Files/TD_TC10_Middleware).</description>
+   <name>TC10_AZ494_Middleware_401_y_403_segun_token_y_rol</name>
+   <tag>ITMentorSoft, seguridad, roles, TC10</tag>
+   <comment>Dado que una solicitud HTTP se envia a un endpoint protegido
+Cuando el middleware valida el token y los permisos del rol
+Y detecta un token ausente, invalido o un rol sin permiso
+Entonces responde HTTP 401 (no autenticado) o HTTP 403 (no autorizado) segun corresponda</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>534ca910-6f39-5c3b-afd8-2ba97bcdbbaf</testCaseGuid>
+</TestCaseEntity>

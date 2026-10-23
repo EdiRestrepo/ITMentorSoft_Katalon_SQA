@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: Azure Test Plans #422 "Validar el ingreso al modulo de realizacion de la evaluacion inicial". HU 2.1.1 Desarrollo de evaluacion.
+Tipo: positivo. No envia la evaluacion: la descarta al terminar.</description>
+   <name>TC11_AZ422_Ingreso_al_modulo_de_evaluacion_inicial</name>
+   <tag>ITMentorSoft, evaluacion, TC11</tag>
+   <comment>Dado que el estudiante ha ingresado correctamente a la aplicacion
+Cuando ingresa al modulo de evaluacion inicial y elige un tema
+Entonces el sistema muestra el formulario con preguntas del tema organizadas por secciones
+Y la seleccion de preguntas es aleatoria</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>cd37f3ec-4622-5011-b761-878f613842c4</testCaseGuid>
+</TestCaseEntity>

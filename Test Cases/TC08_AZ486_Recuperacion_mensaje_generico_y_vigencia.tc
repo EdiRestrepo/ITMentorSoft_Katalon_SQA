@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: Azure Test Plans #486 "Validar mensaje de privacidad generico y vigencia limite de 5 minutos en el token de recuperacion". HU 1.1.3 Recuperacion de contrasena.
+Tipo: positivo y negativo. Envia la solicitud para un correo registrado y para uno no registrado. No abre el enlace.</description>
+   <name>TC08_AZ486_Recuperacion_mensaje_generico_y_vigencia</name>
+   <tag>ITMentorSoft, autenticacion, recuperacion, TC08</tag>
+   <comment>Dado que el usuario ingresa su correo en el formulario de recuperacion
+Cuando presiona Enviar con un correo de formato valido
+Entonces muestra siempre el mensaje generico de privacidad
+Y informa que el enlace es valido por 5 minutos</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0f47d631-9b92-591a-8ba2-36b0d64928d0</testCaseGuid>
+</TestCaseEntity>

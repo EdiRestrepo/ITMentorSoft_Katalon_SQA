@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: Azure Test Plans #483 "Validar manejo de errores de formato y mensaje generico ante credenciales incorrectas". HU 1.1.2 Inicio de sesion.
+Tipo: negativo (validaciones de formato y credenciales incorrectas).
+Solo hace un intento fallido con la cuenta real para no activar el bloqueo por intentos.</description>
+   <name>TC04_AZ483_Login_errores_de_formato_y_mensaje_generico</name>
+   <tag>ITMentorSoft, autenticacion, TC04</tag>
+   <comment>Dado que un usuario registrado accede al formulario de autenticacion
+Cuando ingresa campos vacios, un correo con estructura invalida o una contrasena incorrecta
+Y hace clic en Iniciar sesion
+Entonces el sistema valida los formatos requeridos
+Y ante credenciales incorrectas muestra un mensaje generico sin revelar cual campo fallo</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>42551f7d-64e3-5b19-90a5-5c70b602650a</testCaseGuid>
+</TestCaseEntity>

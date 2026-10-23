@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: Azure Test Plans #502 (representacion grafica de reportes), #418 (reporte dada una categoria), #476 (consolidacion por categoria y filtros) y #455 (CP-4.1.3 consulta y filtrado del progreso desde el dashboard docente).
+Tipo: positivo con verificacion cruzada contra la API.</description>
+   <name>TC17_AZ502_AZ476_AZ455_Reportes_graficos_y_filtro_por_nivel</name>
+   <tag>ITMentorSoft, reportes, dashboard, TC17</tag>
+   <comment>Dado que existen estudiantes y el docente accede al dashboard y a los reportes
+Cuando se consolida la informacion por categoria
+Entonces se presentan metricas y graficos consistentes con los datos almacenados
+Y al filtrar por una categoria solo se muestran sus estudiantes
+Y al quitar el filtro se muestra el 100 % de los datos</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5a6e512e-6309-5613-a67f-f863af6bcd1c</testCaseGuid>
+</TestCaseEntity>

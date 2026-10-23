@@ -32,6 +32,23 @@ CASOS = [
      'Azure #466 · HU 2.1.3 CA1 · Riesgo RH02 / R03 + R01'),
     ('TC03', 'TC03_HU211_Evaluacion_inicial_secuencial_y_persistencia_de_respuestas', 'Evaluación secuencial y persistencia de respuestas',
      'Azure #434 · HU 2.1.1 CA2, CA3, CR-006 · Riesgo RH03'),
+    ('TC04', 'TC04_AZ483_Login_errores_de_formato_y_mensaje_generico', 'Login: errores de formato y mensaje genérico', 'Azure #483 · HU 1.1.2'),
+    ('TC05', 'TC05_AZ478_Registro_limites_de_longitud_y_formato', 'Registro: límites de longitud y formato', 'Azure #478 · HU 1.1.1'),
+    ('TC06', 'TC06_AZ482_Registro_unicidad_de_usuario_y_correo', 'Registro: unicidad de usuario y correo', 'Azure #482 · HU 1.1.1'),
+    ('TC07', 'TC07_AZ485_Login_exitoso_cookie_segura_y_redireccion_por_rol', 'Login exitoso: cookie segura, vigencia y redirección por rol', 'Azure #485 · HU 1.1.2 CA5'),
+    ('TC08', 'TC08_AZ486_Recuperacion_mensaje_generico_y_vigencia', 'Recuperación de contraseña: mensaje genérico', 'Azure #486 · HU 1.1.3'),
+    ('TC09', 'TC09_AZ488_Restablecimiento_enlace_invalido_y_complejidad', 'Restablecimiento: enlace inválido o vencido y complejidad', 'Azure #488, #486 · HU 1.1.3'),
+    ('TC10', 'TC10_AZ494_Middleware_401_y_403_segun_token_y_rol', 'Middleware de autorización: HTTP 401 y 403', 'Azure #494, #489 · HU 1.2.1'),
+    ('TC11', 'TC11_AZ422_Ingreso_al_modulo_de_evaluacion_inicial', 'Ingreso al módulo de evaluación inicial', 'Azure #422 · HU 2.1.1'),
+    ('TC12', 'TC12_AZ435_AZ457_Finalizacion_y_retroalimentacion_de_la_evaluacion', 'Finalización y retroalimentación de la evaluación', 'Azure #435, #457 · HU 2.1.1, 4.2.1'),
+    ('TC13', 'TC13_AZ426_AZ451_AZ475_Progreso_perfil_y_categoria_del_estudiante', 'Progreso, perfil de conocimiento y categoría del estudiante', 'Azure #426, #451, #459, #465, #475'),
+    ('TC14', 'TC14_AZ436_AZ446_AZ461_Ruta_de_aprendizaje_y_recomendaciones', 'Ruta de aprendizaje y recomendaciones', 'Azure #436, #446, #461'),
+    ('TC15', 'TC15_AZ448_Calificacion_de_recursos_recomendados', 'Calificación de recursos recomendados', 'Azure #448'),
+    ('TC16', 'TC16_AZ450_AZ500_Acceso_por_rol_a_reportes_y_datos_consolidados', 'Acceso por rol a reportes y JSON consolidado', 'Azure #450, #500'),
+    ('TC17', 'TC17_AZ502_AZ476_AZ455_Reportes_graficos_y_filtro_por_nivel', 'Reportes gráficos, consolidación y filtro por nivel', 'Azure #502, #418, #476, #455'),
+    ('TC18', 'TC18_AZ440_AZ444_Reportes_de_recursos_y_banco_de_preguntas', 'Reportes de recursos y del banco de preguntas', 'Azure #440, #444'),
+    ('TC19', 'TC19_AZ430_Gestion_de_recursos_validaciones_y_consulta', 'Gestión de recursos: validaciones y consulta', 'Azure #430'),
+    ('TC20', 'TC20_AZ468_Banco_de_preguntas_paginacion_filtros_y_versiones', 'Banco de preguntas: paginación, filtros y versiones', 'Azure #468, #499'),
 ]
 
 RE_REGISTRO = re.compile(r'<record>(.*?)</record>', re.S)
@@ -169,7 +186,7 @@ def main():
 def escribir_md(datos, ajustes, generado):
     l = ['# Informe de ejecución de pruebas – ITMentorSoft', '',
          f'Generado: {generado} · Aplicación: https://itmentorsoft.com · Herramienta: Katalon Studio 11.6 · Perfil: `default` · Navegador: Chrome', '',
-         'Fuente: logs de Katalon en `Reports/` y evidencias del keyword `Evidencia`. Las capturas de la última ejecución de cada caso se copiaron a `Documentacion/Evidencias_Ejecucion/`. El reporte visual está en `Documentacion/Reporte_Pruebas.html`.', '',
+         'Fuente: logs de Katalon en `Reports/` y evidencias del keyword `Evidencia`. Las capturas de la última ejecución de cada caso se copiaron a `Documentacion/Evidencias_Ejecucion/`. El reporte visual está en `Documentacion/Reporte_Pruebas.html`. La clasificación de los 43 casos de Azure DevOps y su trazabilidad con estos casos está en `Documentacion/Inventario_Casos_Azure.md`; los defectos y observaciones, al final de este informe.', '',
          '## Resumen', '', '| Caso | Descripción | Origen | Resultado | Fecha | Duración | Intentos |', '|---|---|---|---|---|---|---|']
     for d in datos:
         u = d['ultima']
@@ -287,7 +304,7 @@ main {{ max-width:1100px; margin:0 auto; padding:24px 16px 48px; }} h1 {{ margin
 figcaption {{ color:var(--muted); font-size:.85rem; }} code {{ font-size:.85em; word-break:break-all; }} .log li {{ margin:2px 0; word-break:break-word; }}
 </style></head><body><main>
 <h1>Reporte de pruebas – ITMentorSoft</h1>
-<p class="sub">Generado {generado} · https://itmentorsoft.com · Katalon Studio 11.6 · Perfil default · Chrome · Fuente: logs de Katalon (<code>Reports/</code>) y evidencias del proyecto</p>
+<p class="sub">Generado {generado} · https://itmentorsoft.com · Katalon Studio 11.6 · Perfil default · Chrome · Fuente: logs de Katalon (<code>Reports/</code>) y evidencias del proyecto · Trazabilidad con Azure: <code>Documentacion/Inventario_Casos_Azure.md</code> · Defectos y observaciones al final</p>
 <div class="kpis"><div class="kpi"><b>{total}</b>Casos</div><div class="kpi"><b style="color:var(--ok)">{conteo['PASSED']}</b>PASSED</div><div class="kpi"><b style="color:var(--fail)">{conteo['FAILED']}</b>FAILED</div><div class="kpi"><b style="color:var(--err)">{conteo['ERROR'] + conteo['INCOMPLETO']}</b>ERROR</div><div class="kpi"><b>{conteo['NO EJECUTADO']}</b>No ejecutados</div></div>
 <section><h2>Resumen</h2><div class="scroll"><table><tr><th>Caso</th><th>Descripción</th><th>Origen</th><th>Resultado</th><th>Fecha</th><th>Duración</th><th>Intentos</th></tr>{filas}</table></div>
 <p class="sub">PASSED = verificaciones cumplidas (las advertencias son observaciones sobre el requisito) · FAILED = defecto funcional · ERROR = no se pudo completar la prueba.</p></section>

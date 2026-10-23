@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: Azure Test Plans #485 "Verificar la emision de cookie JWT HttpOnly/Secure con expiracion de 15 minutos y redireccion segun rol". HU 1.1.2 Inicio de sesion CA5.
+Tipo: positivo. Login completo con OTP por cada rol (Estudiante y Docente), sin reutilizar sesiones.</description>
+   <name>TC07_AZ485_Login_exitoso_cookie_segura_y_redireccion_por_rol</name>
+   <tag>ITMentorSoft, autenticacion, seguridad, TC07</tag>
+   <comment>Dado que el usuario envia credenciales validas y completa la verificacion en dos pasos
+Cuando el sistema confirma la autenticacion
+Entonces almacena el JWT en una cookie HttpOnly y Secure con vigencia de 15 minutos
+Y redirige al usuario a la pantalla de bienvenida de su rol</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>19c5e4f1-cf8d-5105-81a4-d957b72e2f21</testCaseGuid>
+</TestCaseEntity>

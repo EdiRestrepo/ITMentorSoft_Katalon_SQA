@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Origen: Azure Test Plans #475 (objetivos segun la categoria o mensaje pendiente), #459 (explicacion de la categorizacion), #451 (identificacion de debilidades), #426 (visualizacion del progreso) y #465 (grafica comparativa de progreso).
+Tipo: positivo con verificacion cruzada contra la API. Requiere una evaluacion calificada (TC12).</description>
+   <name>TC13_AZ426_AZ451_AZ475_Progreso_perfil_y_categoria_del_estudiante</name>
+   <tag>ITMentorSoft, progreso, perfil, TC13</tag>
+   <comment>Dado que el estudiante ha iniciado sesion y tiene evaluaciones registradas
+Cuando accede a su panel y a Mi progreso
+Entonces ve la categoria asignada o el mensaje de evaluacion pendiente
+Y su perfil de conocimiento por tema con las areas de mejora
+Y la explicacion (feedback) de su categorizacion y la grafica de progreso por tema</comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a11ae1a6-e5d2-5b28-9aa3-d85f2d2a7612</testCaseGuid>
+</TestCaseEntity>

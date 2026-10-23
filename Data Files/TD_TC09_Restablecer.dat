@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataFileEntity>
+   <description>Datos TC09 (#488): enlace_vencido = ruta del enlace real de recuperacion (/reset-password?token=...&amp;trx=...) recibido tras ejecutar TC08, y emitido = hora del correo (yyyy-MM-dd HH:mm:ss). La prueba espera a que el enlace tenga mas de 5 minutos. Vaciar despues de usarlo: el token es de un solo uso.</description>
+   <name>TD_TC09_Restablecer</name>
+   <tag></tag>
+   <containsHeaders>true</containsHeaders>
+   <csvSeperator>COMMA</csvSeperator>
+   <dataFile>2d2fcb90-b1d1-5143-a0d1-734bbdb046d0</dataFile>
+   <dataSourceUrl>Data Files/TD_TC09_Restablecer.csv</dataSourceUrl>
+   <driver>CSV</driver>
+   <isInternalPath>true</isInternalPath>
+   <query></query>
+   <secureUserAccount>false</secureUserAccount>
+   <sheetName></sheetName>
+   <usingGlobalDBSetting>false</usingGlobalDBSetting>
+</DataFileEntity>

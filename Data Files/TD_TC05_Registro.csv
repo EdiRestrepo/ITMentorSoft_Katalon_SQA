@@ -1,0 +1,12 @@
+campo,valor,error_esperado,descripcion
+name,,El nombre es requerido,Nombre vacío
+name,Ab,Mínimo 3 caracteres,Nombre por debajo del mínimo (3)
+name,{x101},Máximo 100 caracteres,Nombre por encima del máximo (100)
+username,,El nombre de usuario es requerido,Usuario vacío
+username,ab,Mínimo 3 caracteres,Usuario por debajo del mínimo (3)
+username,{x21},Máximo 20 caracteres,Usuario por encima del máximo (20)
+username,usuario con espacios,"Solo letras, números y guion bajo",Usuario con caracteres no permitidos
+email,,El correo electrónico es requerido,Correo vacío
+email,correo@,Ingresa un correo electrónico válido,Correo sin dominio
+password,,La contraseña es requerida,Contraseña vacía
+confirmPassword,,Confirma tu contraseña,Confirmación vacía
