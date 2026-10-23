@@ -1,0 +1,608 @@
+{
+ "fuente": "Azure DevOps especializacion-itm / Trabajo de Grado - Tutor inteligente (lectura por MCP)",
+ "fecha_lectura": "2026-10-23",
+ "casos": [
+  {
+   "id": 418,
+   "titulo": "Verificar que se genera un reporte dada una categoria",
+   "hu": [
+    {
+     "id": 241,
+     "titulo": "HU 2.2.3 Reportes por categoría"
+    }
+   ],
+   "responsable": "Yesid Alexander García López",
+   "tipo": "Automatizado",
+   "katalon": "TC17",
+   "nota": ""
+  },
+  {
+   "id": 422,
+   "titulo": "Validar el ingreso al módulo de realización de la evaluación inicial",
+   "hu": [
+    {
+     "id": 212,
+     "titulo": "HU 2.1.1 Desarrollo de evaluación"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado",
+   "katalon": "TC11",
+   "nota": ""
+  },
+  {
+   "id": 426,
+   "titulo": "Caso de prueba: CP-4.1.1 – Visualización y actualización del progreso de aprendizaje",
+   "hu": [
+    {
+     "id": 291,
+     "titulo": "HU 4.1.1 Progreso de aprendizaje"
+    }
+   ],
+   "responsable": "Ivan Dario Valencia Correa",
+   "tipo": "Automatizado parcial",
+   "katalon": "TC13",
+   "nota": "Parcial: vista Mi progreso y avance de la ruta."
+  },
+  {
+   "id": 430,
+   "titulo": "Verificar registro y actualización de contenido académico",
+   "hu": [
+    {
+     "id": 246,
+     "titulo": "HU 3.1.1 Registro de contenido acádemico"
+    }
+   ],
+   "responsable": "Edison Estival Restrepo Ospina",
+   "tipo": "Automatizado parcial",
+   "katalon": "TC19",
+   "nota": "Parcial: no se guardan recursos para no alterar el catálogo compartido."
+  },
+  {
+   "id": 434,
+   "titulo": "Validar interacción de preguntas de la evaluación inicial",
+   "hu": [
+    {
+     "id": 212,
+     "titulo": "HU 2.1.1 Desarrollo de evaluación"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado",
+   "katalon": "TC03",
+   "nota": ""
+  },
+  {
+   "id": 435,
+   "titulo": "Garantizar finalización de evaluación inicial",
+   "hu": [
+    {
+     "id": 212,
+     "titulo": "HU 2.1.1 Desarrollo de evaluación"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado",
+   "katalon": "TC12",
+   "nota": ""
+  },
+  {
+   "id": 436,
+   "titulo": "Verificar generación y actualización de ruta de aprendizaje personalizada",
+   "hu": [
+    {
+     "id": 251,
+     "titulo": "HU 3.1.2 Ruta de aprendizaje"
+    }
+   ],
+   "responsable": "Edison Estival Restrepo Ospina",
+   "tipo": "Automatizado parcial",
+   "katalon": "TC14",
+   "nota": "Parcial: la notificación al administrador no es observable."
+  },
+  {
+   "id": 438,
+   "titulo": "Verificar actualización y desactivación de recursos académicos",
+   "hu": [
+    {
+     "id": 257,
+     "titulo": "HU 3.1.3 Actualizar recursos acádemicos"
+    }
+   ],
+   "responsable": "Edison Estival Restrepo Ospina",
+   "tipo": "No automatizable",
+   "katalon": null,
+   "nota": "Requiere rol Administrador (no hay cuenta). La denegación a otros roles se cubre en TC10."
+  },
+  {
+   "id": 440,
+   "titulo": "Verificar generación de reportes de contenido académico",
+   "hu": [
+    {
+     "id": 262,
+     "titulo": "HU 3.1.4 Reportes de contenido acádemico"
+    }
+   ],
+   "responsable": "Edison Estival Restrepo Ospina",
+   "tipo": "Automatizado parcial",
+   "katalon": "TC18",
+   "nota": "Parcial: no se resaltan promedios < 3.5 (advertencia)."
+  },
+  {
+   "id": 442,
+   "titulo": "Verificar actualización de rutas de aprendizaje",
+   "hu": [
+    {
+     "id": 268,
+     "titulo": "HU 3.2.1 Actualizar rutas de aprendizaje"
+    }
+   ],
+   "responsable": "Edison Estival Restrepo Ospina",
+   "tipo": "No automatizable",
+   "katalon": null,
+   "nota": "La aplicación no ofrece al docente un módulo de rutas: se generan automáticamente."
+  },
+  {
+   "id": 444,
+   "titulo": "Verificar generación de reportes de debilidades por estudiant",
+   "hu": [
+    {
+     "id": 274,
+     "titulo": "HU 3.2.2 Reportes por estudiante"
+    }
+   ],
+   "responsable": "Edison Estival Restrepo Ospina",
+   "tipo": "Automatizado parcial",
+   "katalon": "TC18",
+   "nota": "Parcial: no existe el consolidado de \"debilidad común\" (advertencia)."
+  },
+  {
+   "id": 446,
+   "titulo": "Verificar recepción de ruta de aprendizaje personalizada",
+   "hu": [
+    {
+     "id": 279,
+     "titulo": "HU 3.2.3 Recepción de ruta de aprendizaje personalizada"
+    }
+   ],
+   "responsable": "Edison Estival Restrepo Ospina",
+   "tipo": "Automatizado parcial",
+   "katalon": "TC14",
+   "nota": "Parcial: la aplicación no registra intereses del estudiante."
+  },
+  {
+   "id": 448,
+   "titulo": "Verificar calificación de recursos recomendados",
+   "hu": [
+    {
+     "id": 285,
+     "titulo": "HU 3.2.4 Dar retrospectiva sobre contenido acádemico"
+    }
+   ],
+   "responsable": "Edison Estival Restrepo Ospina",
+   "tipo": "Automatizado",
+   "katalon": "TC15",
+   "nota": ""
+  },
+  {
+   "id": 450,
+   "titulo": "Verificar acceso autorizado a reportes por estudiante",
+   "hu": [
+    {
+     "id": 274,
+     "titulo": "HU 3.2.2 Reportes por estudiante"
+    }
+   ],
+   "responsable": "Edison Estival Restrepo Ospina",
+   "tipo": "Automatizado",
+   "katalon": "TC16",
+   "nota": ""
+  },
+  {
+   "id": 451,
+   "titulo": "Caso de prueba: CP-4.2.2 – Identificación, clasificación y actualización de debilidades",
+   "hu": [
+    {
+     "id": 314,
+     "titulo": "HU 4.2.2 Visualización de debilidades"
+    }
+   ],
+   "responsable": "Ivan Dario Valencia Correa",
+   "tipo": "Automatizado parcial",
+   "katalon": "TC13",
+   "nota": "Parcial: no se muestra la severidad alta/media."
+  },
+  {
+   "id": 455,
+   "titulo": "Caso de prueba: CP-4.1.3 – Consulta y filtrado del progreso de estudiantes desde el dashboard docente",
+   "hu": [
+    {
+     "id": 303,
+     "titulo": "HU 4.1.3 Progreso de estudiantes desde Docente"
+    }
+   ],
+   "responsable": "Ivan Dario Valencia Correa",
+   "tipo": "Automatizado",
+   "katalon": "TC17",
+   "nota": ""
+  },
+  {
+   "id": 457,
+   "titulo": "Caso de prueba: CP-4.2.1 – Generación y consulta de retroalimentación de una evaluación",
+   "hu": [
+    {
+     "id": 308,
+     "titulo": "HU 4.2.1 Feedback por evaluación"
+    }
+   ],
+   "responsable": "Ivan Dario Valencia Correa",
+   "tipo": "Automatizado",
+   "katalon": "TC12",
+   "nota": ""
+  },
+  {
+   "id": 459,
+   "titulo": "Caso de prueba: CP-4.2.3 – Generación y visualización de la explicación de categorización",
+   "hu": [
+    {
+     "id": 320,
+     "titulo": "HU 4.2.3 Explicación de categorización"
+    }
+   ],
+   "responsable": "Ivan Dario Valencia Correa",
+   "tipo": "Automatizado parcial",
+   "katalon": "TC13",
+   "nota": "Parcial: las variables del modelo no son observables."
+  },
+  {
+   "id": 461,
+   "titulo": "Validar confirmación de recurso finalizado y selección exacta de 10 preguntas aleatorias",
+   "hu": [
+    {
+     "id": 218,
+     "titulo": "HU 2.1.2 Evaluación de un tema especifico"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado parcial",
+   "katalon": "TC14",
+   "nota": "Parcial: no existe la evaluación de seguimiento de 10 preguntas."
+  },
+  {
+   "id": 465,
+   "titulo": "Verificar recalificación de nivel y visualización de gráfica comparativa de progreso histórico",
+   "hu": [
+    {
+     "id": 218,
+     "titulo": "HU 2.1.2 Evaluación de un tema especifico"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado parcial",
+   "katalon": "TC13",
+   "nota": "Parcial: la recalificación requiere varias evaluaciones de seguimiento."
+  },
+  {
+   "id": 466,
+   "titulo": "Verificar restricción de acceso al módulo de administración de evaluaciones según el rol del usuario",
+   "hu": [
+    {
+     "id": 224,
+     "titulo": "HU 2.1.3 Creación de rubricas"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado",
+   "katalon": "TC02",
+   "nota": ""
+  },
+  {
+   "id": 468,
+   "titulo": "Validar paginación exacta de 20 preguntas por tema y persistencia de operaciones CRUD en cuestionarios",
+   "hu": [
+    {
+     "id": 224,
+     "titulo": "HU 2.1.3 Creación de rubricas"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado parcial",
+   "katalon": "TC20",
+   "nota": "Parcial: pagina de a 10 (Azure: 20); no se crean ni editan preguntas."
+  },
+  {
+   "id": 469,
+   "titulo": "Validar la generación de JSON y asignación de categoría única por el modelo de ML",
+   "hu": [
+    {
+     "id": 228,
+     "titulo": "HU 2.2.1 Asignación de categoría"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "No automatizable",
+   "katalon": null,
+   "nota": "Interno del modelo de ML. Evidencia indirecta en TC12/TC13 (un único nivel asignado)."
+  },
+  {
+   "id": 471,
+   "titulo": "Verificar la resiliencia del sistema ante fallos de ejecución del modelo de ML o fallos de base de datos",
+   "hu": [
+    {
+     "id": 228,
+     "titulo": "HU 2.2.1 Asignación de categoría"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "No automatizable",
+   "katalon": null,
+   "nota": "Requiere inyectar fallos en la infraestructura del entorno."
+  },
+  {
+   "id": 472,
+   "titulo": "Validar actualización de categoría, conservación de histórico de versiones y notificación al perfil",
+   "hu": [
+    {
+     "id": 228,
+     "titulo": "HU 2.2.1 Asignación de categoría"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "No automatizable",
+   "katalon": null,
+   "nota": "Requiere varias reclasificaciones y acceso al histórico del modelo."
+  },
+  {
+   "id": 473,
+   "titulo": "Validar regla de al menos 3 objetivos por categoría y alerta de objetivos no asignados en CRUD",
+   "hu": [
+    {
+     "id": 235,
+     "titulo": "HU 2.2.2 Identificación de debilidades"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "No automatizable",
+   "katalon": null,
+   "nota": "Configuración de categorías y objetivos reservada al Administrador."
+  },
+  {
+   "id": 475,
+   "titulo": "Verificar despliegue de objetivos según la categoría asignada o mensaje de evaluación pendiente",
+   "hu": [
+    {
+     "id": 235,
+     "titulo": "HU 2.2.2 Identificación de debilidades"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado",
+   "katalon": "TC13",
+   "nota": ""
+  },
+  {
+   "id": 476,
+   "titulo": "Validar consolidación de estudiantes por categoría, cálculo de métricas y filtros en dashboard docente",
+   "hu": [
+    {
+     "id": 241,
+     "titulo": "HU 2.2.3 Reportes por categoría"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado",
+   "katalon": "TC17",
+   "nota": ""
+  },
+  {
+   "id": 477,
+   "titulo": "Verificar activación de alerta 'requiere mejora' para categorías con promedio de calificación inferior al 70%",
+   "hu": [
+    {
+     "id": 241,
+     "titulo": "HU 2.2.3 Reportes por categoría"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "No automatizable",
+   "katalon": null,
+   "nota": "Alerta dirigida al Administrador; no visible para Docente ni Estudiante."
+  },
+  {
+   "id": 478,
+   "titulo": "Validar limites de longitud y expresiones regulares en campos del formulario de registro",
+   "hu": [
+    {
+     "id": 176,
+     "titulo": "HU 1.1.1 Registro de usuarios"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado",
+   "katalon": "TC05",
+   "nota": ""
+  },
+  {
+   "id": 482,
+   "titulo": "Verificar unicidad de username/email y almacenamiento seguro mediante hash bcrypt/Argon2",
+   "hu": [
+    {
+     "id": 176,
+     "titulo": "HU 1.1.1 Registro de usuarios"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado parcial",
+   "katalon": "TC06",
+   "nota": "Parcial: el hash bcrypt/Argon2 no es observable."
+  },
+  {
+   "id": 483,
+   "titulo": "Validar manejo de errores de formato y mensaje genérico ante credenciales incorrectas",
+   "hu": [
+    {
+     "id": 181,
+     "titulo": "HU 1.1.2 Inicio de sesión"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado",
+   "katalon": "TC04",
+   "nota": ""
+  },
+  {
+   "id": 485,
+   "titulo": "Verificar la emisión de cookie JWT HttpOnly/Secure con expiración de 15 minutos y redirección según rol",
+   "hu": [
+    {
+     "id": 181,
+     "titulo": "HU 1.1.2 Inicio de sesión"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado",
+   "katalon": "TC07",
+   "nota": ""
+  },
+  {
+   "id": 486,
+   "titulo": "Validar mensaje de privacidad genérico y vigencia límite de 5 minutos en el token de recuperación",
+   "hu": [
+    {
+     "id": 186,
+     "titulo": "HU 1.1.3 Reestablecer contraseña"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado",
+   "katalon": "TC08",
+   "nota": ""
+  },
+  {
+   "id": 488,
+   "titulo": "Verificar validación de token vencido, requisitos de contraseña segura y revocación de sesiones previas",
+   "hu": [
+    {
+     "id": 186,
+     "titulo": "HU 1.1.3 Reestablecer contraseña"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado",
+   "katalon": "TC09",
+   "nota": ""
+  },
+  {
+   "id": 489,
+   "titulo": "Validar edición de permisos por rol y restricción de acceso según permisos asignados",
+   "hu": [
+    {
+     "id": 193,
+     "titulo": "HU 1.2.1 Asignación de roles"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado parcial",
+   "katalon": "TC10",
+   "nota": "Parcial: solo la restricción de acceso; la edición de permisos requiere Administrador."
+  },
+  {
+   "id": 493,
+   "titulo": "Verificar bloqueo de eliminación de roles asociados a uno o más usuarios activos",
+   "hu": [
+    {
+     "id": 193,
+     "titulo": "HU 1.2.1 Asignación de roles"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "No automatizable",
+   "katalon": null,
+   "nota": "Gestión de roles reservada al Administrador."
+  },
+  {
+   "id": 494,
+   "titulo": "Validar interceptación de Middleware retornando HTTP 401 y HTTP 403 según token y permisos",
+   "hu": [
+    {
+     "id": 198,
+     "titulo": "HU 1.2.2 Acceso y privacidad en datos"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado",
+   "katalon": "TC10",
+   "nota": ""
+  },
+  {
+   "id": 496,
+   "titulo": "Verificar aislamiento estricto de información académica y enmascaramiento con HTTP 404",
+   "hu": [
+    {
+     "id": 198,
+     "titulo": "HU 1.2.2 Acceso y privacidad en datos"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado",
+   "katalon": "TC01",
+   "nota": ""
+  },
+  {
+   "id": 497,
+   "titulo": "Validar acceso al módulo de rúbricas y marcado de 'pendiente de baja' con notificación",
+   "hu": [
+    {
+     "id": 203,
+     "titulo": "HU 1.2.3 Acceso a rubricas de calificación"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "No automatizable",
+   "katalon": null,
+   "nota": "La aplicación no tiene módulo de rúbricas ni estado \"pendiente de baja\"."
+  },
+  {
+   "id": 499,
+   "titulo": "Verificar la preservación de versión activa previa y flujo de aprobación/rechazo de cambios en rúbricas",
+   "hu": [
+    {
+     "id": 203,
+     "titulo": "HU 1.2.3 Acceso a rubricas de calificación"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado parcial",
+   "katalon": "TC20",
+   "nota": "Parcial: historial de versiones; la aprobación la hace el Administrador."
+  },
+  {
+   "id": 500,
+   "titulo": "Validar control de acceso al módulo de reportes generales y extracción de datos consolidados JSON",
+   "hu": [
+    {
+     "id": 207,
+     "titulo": "HU 1.2.4 Reportes de estudiantes"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado",
+   "katalon": "TC16",
+   "nota": ""
+  },
+  {
+   "id": 502,
+   "titulo": "Verificar la representación gráfica de reportes y el control de vista en ausencia de datos",
+   "hu": [
+    {
+     "id": 207,
+     "titulo": "HU 1.2.4 Reportes de estudiantes"
+    }
+   ],
+   "responsable": "Carlos Hernando Franco Idarraga",
+   "tipo": "Automatizado",
+   "katalon": "TC17",
+   "nota": ""
+  }
+ ]
+}
