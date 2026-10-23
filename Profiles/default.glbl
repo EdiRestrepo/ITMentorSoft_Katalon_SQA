@@ -1,62 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalVariableEntities>
-   <description>Perfil default [entorno local de desarrollo]</description>
+   <description>Perfil default [produccion: https://itmentorsoft.com]</description>
    <name>default</name>
    <tag></tag>
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
-      <description>TODO: URL base de ITMentorSoft (ej. la del frontend Angular). Sin barra final. [entorno local de desarrollo]</description>
-      <initValue>''</initValue>
+      <description>URL base de ITMentorSoft, sin barra final.</description>
+      <initValue>'https://itmentorsoft.com'</initValue>
       <name>BASE_URL</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>TODO: ruta (relativa a BASE_URL) donde el estudiante consulta SUS resultados academicos. HU 1.2.2 CA2. [entorno local de desarrollo]</description>
-      <initValue>''</initValue>
+      <description>Pantalla de inicio de sesion (email + contrasena). HU 1.1.2.</description>
+      <initValue>'/login'</initValue>
+      <name>RUTA_LOGIN</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Panel del estudiante con SUS datos academicos. HU 1.2.2 CA2.</description>
+      <initValue>'/student/dashboard'</initValue>
       <name>RUTA_RESULTADOS_PROPIOS</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>TODO: ruta de resultados de UN estudiante por identificador. Debe contener el marcador {idEstudiante}. HU 1.2.2 CA3. [entorno local de desarrollo]</description>
-      <initValue>''</initValue>
+      <description>Reporte individual de un estudiante por id. Debe contener {idEstudiante}. HU 1.2.2 CA3.</description>
+      <initValue>'/teacher/students/{idEstudiante}'</initValue>
       <name>RUTA_RESULTADOS_ESTUDIANTE</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>TODO: ruta del modulo de administracion de evaluaciones tecnicas. HU 2.1.3 CA1. [entorno local de desarrollo]</description>
-      <initValue>''</initValue>
+      <description>Modulo de administracion de evaluaciones tecnicas (banco de preguntas y rubricas). HU 2.1.3 CA1.</description>
+      <initValue>'/teacher/questions'</initValue>
       <name>RUTA_ADMIN_EVALUACIONES</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>TODO: ruta del modulo de evaluacion inicial. HU 2.1.1. [entorno local de desarrollo]</description>
-      <initValue>''</initValue>
+      <description>Modulo de evaluacion del estudiante. HU 2.1.1.</description>
+      <initValue>'/student/assessments'</initValue>
       <name>RUTA_EVALUACION_INICIAL</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>TODO: email de la cuenta de prueba Estudiante A (sin contrasena; esta va en la variable de entorno ITM_PWD_ESTUDIANTE_A). [entorno local de desarrollo]</description>
-      <initValue>''</initValue>
-      <name>USUARIO_ESTUDIANTE_A</name>
+      <description>API (sesion docente) con la lista de estudiantes. TC01 la usa para obtener el id de otro estudiante.</description>
+      <initValue>'/reports/students?page=0&amp;page_size=50'</initValue>
+      <name>API_ESTUDIANTES_DOCENTE</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>TODO: email de un Estudiante de prueba SIN evaluacion inicial iniciada (contrasena en ITM_PWD_ESTUDIANTE_EVAL). Se consume en cada ejecucion de TC03. [entorno local de desarrollo]</description>
-      <initValue>''</initValue>
-      <name>USUARIO_ESTUDIANTE_EVAL</name>
+      <description>API del perfil de conocimiento de un estudiante. HU 1.2.2 CA3.</description>
+      <initValue>'/reports/student_summary?id={idEstudiante}'</initValue>
+      <name>API_RESUMEN_ESTUDIANTE</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>TODO: email de la cuenta de prueba Docente (contrasena en ITM_PWD_DOCENTE). [entorno local de desarrollo]</description>
-      <initValue>''</initValue>
+      <description>API del historial de evaluaciones de un estudiante. HU 1.2.2 CA3.</description>
+      <initValue>'/assessments/summary?student_id={idEstudiante}&amp;page=0&amp;page_size=20'</initValue>
+      <name>API_HISTORIAL_ESTUDIANTE</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>API del banco de preguntas del modulo de administracion. HU 2.1.3 CA1.</description>
+      <initValue>'/assessments/all-questions?page=0&amp;page_size=5'</initValue>
+      <name>API_BANCO_PREGUNTAS</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Email de la cuenta Estudiante (contrasena en la variable de entorno ITM_PWD_ESTUDIANTE). Usada por TC01, TC02 y TC03.</description>
+      <initValue>'edisonestival@gmail.com'</initValue>
+      <name>USUARIO_ESTUDIANTE</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Email de la cuenta Docente (contrasena en la variable de entorno ITM_PWD_DOCENTE). Usada por TC01 y TC02.</description>
+      <initValue>'edisonrestrepo68991@correo.itm.edu.co'</initValue>
       <name>USUARIO_DOCENTE</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>TODO: email de la cuenta de prueba Administrador (contrasena en ITM_PWD_ADMINISTRADOR). [entorno local de desarrollo]</description>
+      <description>Opcional: email de una cuenta Administrador (contrasena en ITM_PWD_ADMINISTRADOR). Ningun caso actual la usa.</description>
       <initValue>''</initValue>
       <name>USUARIO_ADMINISTRADOR</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>Segundos para esperas de elementos que deben aparecer de inmediato. [entorno local de desarrollo]</description>
+      <description>Segundos para esperas de elementos que deben aparecer de inmediato.</description>
       <initValue>5</initValue>
       <name>TIMEOUT_CORTO</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>Segundos para cargas de pagina / respuestas del backend (SQA: P95 sincrono menor a 2 s). [entorno local de desarrollo]</description>
+      <description>Segundos para cargas de pagina y respuestas del backend.</description>
       <initValue>20</initValue>
       <name>TIMEOUT_LARGO</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Segundos que el caso espera a que el tester escriba el codigo OTP recibido por correo.</description>
+      <initValue>180</initValue>
+      <name>TIMEOUT_OTP</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Segundos maximos para que el sistema genere las preguntas de una evaluacion.</description>
+      <initValue>90</initValue>
+      <name>TIMEOUT_EVALUACION</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

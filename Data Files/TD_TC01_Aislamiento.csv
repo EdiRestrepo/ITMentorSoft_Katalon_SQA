@@ -1,2 +1,2 @@
-id_estudiante_b,marcador_dato_estudiante_b,mensaje_404_esperado
-TODO,TODO,TODO
+id_estudiante_b,codigo_http_esperado
+AUTO,404

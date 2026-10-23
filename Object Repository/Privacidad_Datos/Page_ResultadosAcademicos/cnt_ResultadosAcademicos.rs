@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>PROVISIONAL - reemplazar por el localizador real. Contenedor donde se listan los resultados academicos de un estudiante. HU 1.2.2 CA2.</description>
+   <description>Panel principal del estudiante con SUS datos academicos (/student/dashboard). HU 1.2.2 CA2.</description>
    <name>cnt_ResultadosAcademicos</name>
-   <tag>TODO</tag>
+   <tag></tag>
    <elementGuidId>40888864-a597-595a-90d2-f42e3c9776e7</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>[data-todo=&quot;TODO_cnt_ResultadosAcademicos&quot;]</value>
+         <value>app-student-dashboard</value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

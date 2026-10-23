@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DataFileEntity>
-   <description>Datos de entrada TC01 (HU 1.2.2). Reemplazar los TODO con datos del entorno de pruebas.</description>
+   <description>Datos TC01 (HU 1.2.2): id_estudiante_b = id de otro estudiante, o AUTO para obtenerlo con la cuenta Docente; codigo_http_esperado = error generico de HU 1.2.2 CA3 (404).</description>
    <name>TD_TC01_Aislamiento</name>
    <tag></tag>
    <containsHeaders>true</containsHeaders>
-   <csvSeperator>,</csvSeperator>
+   <csvSeperator>COMMA</csvSeperator>
    <dataFile>20547e95-7431-54f1-96f8-b15840c40b4e</dataFile>
    <dataSourceUrl>Data Files/TD_TC01_Aislamiento.csv</dataSourceUrl>
    <driver>CSV</driver>

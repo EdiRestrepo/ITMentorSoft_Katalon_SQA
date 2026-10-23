@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>PROVISIONAL - reemplazar por el localizador real. Boton &quot;Enviar&quot; del formulario de inicio de sesion. HU 1.1.2 CA2.</description>
+   <description>Boton &quot;Iniciar sesion&quot; del formulario de login. HU 1.1.2 CA2.</description>
    <name>btn_Enviar</name>
-   <tag>TODO</tag>
+   <tag></tag>
    <elementGuidId>caaff303-b1ec-5b1d-bdba-28ae2ea6d781</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>[data-todo=&quot;TODO_btn_Enviar&quot;]</value>
+         <value>form.login-form button[type='submit']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

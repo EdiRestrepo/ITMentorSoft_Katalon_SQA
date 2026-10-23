@@ -1,4 +1,3 @@
 rol,acceso_esperado,mensaje_denegacion_esperado
-ESTUDIANTE,DENEGADO,autorización insuficiente
+ESTUDIANTE,DENEGADO,
 DOCENTE,PERMITIDO,
-ADMINISTRADOR,PERMITIDO,

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DataFileEntity>
-   <description>Respuestas abiertas de prueba para TC03 (HU 2.1.1). Son datos de entrada, no respuestas correctas.</description>
+   <description>Respuestas abiertas de prueba para TC03 (HU 2.1.1). Son datos de entrada, no respuestas correctas. Maximo 600 caracteres.</description>
    <name>TD_TC03_Respuestas</name>
    <tag></tag>
    <containsHeaders>true</containsHeaders>
-   <csvSeperator>,</csvSeperator>
+   <csvSeperator>COMMA</csvSeperator>
    <dataFile>9dee2074-a2d3-54d5-8077-659faaa2d6ec</dataFile>
    <dataSourceUrl>Data Files/TD_TC03_Respuestas.csv</dataSourceUrl>
    <driver>CSV</driver>

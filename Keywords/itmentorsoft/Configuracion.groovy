@@ -118,4 +118,12 @@ class Configuracion {
 	static int timeoutLargo() {
 		return (GlobalVariable.TIMEOUT_LARGO ?: 20) as int
 	}
+
+	static int timeoutOtp() {
+		return (leerVariable('TIMEOUT_OTP') ?: 180) as int
+	}
+
+	static int timeoutEvaluacion() {
+		return (leerVariable('TIMEOUT_EVALUACION') ?: 90) as int
+	}
 }

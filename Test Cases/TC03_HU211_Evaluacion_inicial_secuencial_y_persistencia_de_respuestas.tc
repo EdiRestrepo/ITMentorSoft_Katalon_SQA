@@ -4,14 +4,16 @@
 HU 2.1.1 Desarrollo de evaluacion (Azure #212) - CA2 y CA3. Relacionado: CR-006 (#330) autosave incremental y reanudacion.
 Riesgo: RH03 - perdida o alteracion de respuestas de la evaluacion inicial (entrada de la categorizacion ML y de la calificacion LLM, SQA R01). Criticidad 15 (Alto).
 Tipo: positivo (flujo secuencial y persistencia) + negativo (intento de retroceso).
-ATENCION: cambia el estado de la cuenta USUARIO_ESTUDIANTE_EVAL; usar una cuenta nueva por ejecucion.</description>
+No envia la evaluacion: al terminar descarta la evaluacion en curso de USUARIO_ESTUDIANTE.</description>
    <name>TC03_HU211_Evaluacion_inicial_secuencial_y_persistencia_de_respuestas</name>
    <tag>ITMentorSoft, riesgo-critico, TC03</tag>
-   <comment>Dado que el estudiante inicia la evaluacion inicial
-Cuando responde y confirma la pregunta 1
-Entonces el sistema presenta la pregunta 2, sin controles para saltar o retroceder (CA2)
-Y al usar &quot;Atras&quot; del navegador no puede volver a editar la pregunta 1
-Y al reingresar al modulo continua en la pregunta 2, evidenciando que la respuesta 1 se persistio (CA3, CR-006)</comment>
+   <comment>Dado que el estudiante inicia una evaluacion nueva
+Entonces ve la pregunta 1 de N con &quot;Anterior&quot; deshabilitado (CA2)
+Cuando responde y confirma la pregunta 1 con &quot;Siguiente&quot;
+Entonces el sistema presenta la pregunta 2 de N (CA2)
+Y al salir y volver al modulo la evaluacion sigue en curso con 1 respuesta
+Y al retomarla continua en la pregunta 2 y la respuesta 1 se conserva (CA3, CR-006)
+La evaluacion no se envia y al final se descarta</comment>
    <recordOption>OTHER</recordOption>
    <testCaseGuid>02970067-7bfb-50d8-9104-2d4df2ddf7f1</testCaseGuid>
 </TestCaseEntity>

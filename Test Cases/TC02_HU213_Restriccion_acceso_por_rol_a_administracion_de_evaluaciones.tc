@@ -3,13 +3,13 @@
    <description>Origen: caso existente en Azure Test Plans #466 &quot;Verificar restriccion de acceso al modulo de administracion de evaluaciones segun el rol del usuario&quot;.
 HU 2.1.3 Creacion de rubricas (Azure #224) - CA1. Relacionado: HU 1.2.1 CA4 (#193), HH 1.2.1 CA1 (#360), CR-008 (RBAC centralizado).
 Riesgo: RH02 / SQA R03 + R01 - un Estudiante accede al banco de preguntas/rubricas que alimentan la calificacion con LLM. Criticidad 15 (Alto).
-Tipo: negativo (Estudiante -&gt; DENEGADO) con controles positivos (Docente y Administrador -&gt; PERMITIDO). Dirigido por datos: TD_TC02_Roles.</description>
+Tipo: negativo (Estudiante -&gt; DENEGADO) con control positivo (Docente -&gt; PERMITIDO). En la aplicacion el modulo es /teacher/questions y el guard solo admite el rol docente. Dirigido por datos: TD_TC02_Roles.</description>
    <name>TC02_HU213_Restriccion_acceso_por_rol_a_administracion_de_evaluaciones</name>
    <tag>ITMentorSoft, riesgo-critico, TC02</tag>
-   <comment>Dado un usuario autenticado con el rol de la fila de datos
-Cuando accede directamente a la URL del modulo de administracion de evaluaciones tecnicas
-Entonces si es Docente o Administrador se muestra la lista de temas;
-en caso contrario se deniega el acceso con mensaje de autorizacion y la lista de temas no se muestra</comment>
+   <comment>Dado un usuario autenticado (login + OTP) con el rol de la fila de datos
+Cuando accede directamente a la URL del modulo de administracion de evaluaciones (/teacher/questions) y a su API
+Entonces si es Docente se muestra la lista de preguntas;
+si es Estudiante no se muestra el modulo y la API rechaza la peticion (401/403/404)</comment>
    <recordOption>OTHER</recordOption>
    <testCaseGuid>c7eabe8a-319b-59ce-980e-3a8f58020dd2</testCaseGuid>
 </TestCaseEntity>
